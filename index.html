@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href = "./styles.css" rel="stylesheet">
+</head>
+<body>
+    
+<h1 id = "header"class="text-center p-5 text-color">Welcome To Quiz App</h1>
+<!-- seetings menu based on the choices from our API-->
+<div class="text-center container-md p-5" id ="settings">
+    
+    <h5 class="text-center text-color">Choose kind of questions</h5>
+    <select id = "type-selections" class="form-select  mb-3 mx-auto text-center select-style" aria-label="Default select example">
+      </select>
+      <h5 class="text-center text-color">Choose the level of questions</h5>
+      <select id = "level-selections" class="form-select  mb-3 mx-auto text-center select-style" aria-label="Default select example">
+      </select>
+      <h5 class="text-center text-color">Choose number of questions</h5>
+      <select id = "number-selections" class="form-select  mb-3 mx-auto text-center select-style" aria-label="Default select example">
+        <option class = "option-style" >5</option>
+        <option class = "option-style" >10</option>
+        <option class = "option-style" >15</option>
+        <option class = "option-style" >20</option>
+      </select>
+    <button id = "submit-settings"type="button" class="btn-lg btn-outline-primary mx-auto  submit-button">Submit</button>
+  </div>
+  <!-- Questions that we come from our API after submtting the settings-->
+  <div class="text-center container-md " id ="questions">
+    <div class = "progress-bar">
+        <div id = "boxes">
+        </div>
+    </div>
+    <h3 id="questions-number"class = "text-end p-2" ></h3>
+    <h3 class = "text-start p-3" id = "question"> </h3>
+    <div class = p-3>
+          <div class="text-start form-check "></div>
+          <div class="text-start form-check "></div>
+          <div class="text-start form-check "></div>
+          <div class="text-start form-check "></div>
+    </div>
+    <button id = "next" type="button" class="btn-lg btn-outline-primary mx-auto  submit-button">Next</button>
+  </div>
+  <!-- result of the quiz-->
+  <div class="text-center container-md p-5" id ="result">
+    <div class="row">
+        <h2 id="quiz-result" class="result col p-5 text-color">
+          
+        </h2>
+      </div>
+    <button id = "retake" type="button" class="btn-lg btn-outline-primary mx-auto  submit-button">Retake the quiz</button>
+
+  </div>
+    <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="./main.js"></script>
+</body>
+</html>
